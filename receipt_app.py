@@ -21,5 +21,19 @@ for item in produce_list:
 domestic.sort(key=lambda k: k["name"])
 imported.sort(key=lambda k: k["name"])
 
-
+print(". Domestic")
+for item in domestic:
+    print(f"... {item['name']}\n    Price: ${item['price']}\n    {item['description']}")
+    if item['weight'] == "N/A":
+        print(f"    Weight: {item['weight']}")
+    else:
+        print(f"    Weight: {item['weight']}g")
+print(". Imported")
+for item in imported:
+    print(f"... {item['name']}\n    Price: ${item['price']}\n    {item['description']}")
+    if item['weight'] == "N/A":
+        print(f"    Weight: {item['weight']}")
+    else:
+        print(f"    Weight: {item['weight']}g")
+print(f"Domestic cost: ${dom_cost}\nImported cost: ${imp_cost}\nDomestic count: {len(domestic)}\nImported count: {len(imported)}")
 
